@@ -1,11 +1,12 @@
 - if tasks.empty?
   %span.text-warning There are no tasks!
 - else
-  %table.table.table-hover.table-bordered
+  %table.table.table-hover.table-bordered{:style => "table-layout: fixed; width: 100%"}
     %thead
       %tr
         %th Title
-        %th Created at
+        %th Note
+        %th Started
         %th Completed
         %th Actions
     %tbody
@@ -13,6 +14,7 @@
         %tr
           %td
             %strong= task.title
+          %td.text{:style => "word-wrap: break-word"}= task.note
           %td.text-info= task.created_at
           %td.text-success= task.completed
           %td
