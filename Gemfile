@@ -8,6 +8,7 @@ gem 'simple_form'
 gem 'jquery-rails'
 gem  'bootstrap-datepicker-rails'
 gem 'devise'
+gem 'cancan'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
