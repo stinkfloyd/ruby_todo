@@ -1,7 +1,7 @@
 - if tasks.empty?
   %span.text-warning There are no tasks!
 - else
-  %table.table.table-hover.table-bordered{:style => "table-layout: fixed; width: 100%"}
+  %table.table.table-hover.table-bordered{:id => "table", :style => "table-layout: fixed; width: 100%"}
     %thead
       %tr
         %th Title
