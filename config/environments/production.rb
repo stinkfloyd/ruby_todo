@@ -98,7 +98,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address: 'smtp.mail.yahoo.com',
     port: 465,
-    user_name: ENV["YAHOO_USERNAME"]+'@yahoo.com',
+    user_name: ENV["YAHOO_USERNAME"],
     password: ENV["YAHOO_PASSWORD"],
     authentication: 'plain',
     enable_starttls_auto: true
