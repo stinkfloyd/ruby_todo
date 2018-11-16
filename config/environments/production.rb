@@ -92,15 +92,18 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { host: 'http://todo-yourdomainhere.rhcloud.com' }
-  config.action_mailer.asset_host = 'http://todo-yourdomainhere.rhcloud.com'
+  config.action_mailer.default_url_options = { host: 'https://solomato.herokuapp.com' }
+  config.action_mailer.asset_host = 'https://solomato.herokuapp.com'
+  # Setup the mailer config
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
-    address: 'smtp.mail.yahoo.com',
-    port: 465,
-    user_name: ENV["YAHOO_USERNAME"],
-    password: ENV["YAHOO_PASSWORD"],
-    authentication: 'plain',
-    enable_starttls_auto: true
+    :user_name => ENV['SENDGRID_USERNAME'],
+    :password => ENV['SENDGRID_PASSWORD'],
+    :domain => 'SoloMato',
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
   }
 end

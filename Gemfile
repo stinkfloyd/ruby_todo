@@ -10,6 +10,7 @@ gem  'bootstrap-datepicker-rails'
 gem 'devise'
 gem 'cancan'
 gem 'dotenv-rails'
+gem 'sendgrid-ruby'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
