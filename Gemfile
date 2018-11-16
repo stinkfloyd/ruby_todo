@@ -9,7 +9,6 @@ gem 'jquery-rails'
 gem  'bootstrap-datepicker-rails'
 gem 'devise'
 gem 'cancan'
-gem 'dotenv-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
