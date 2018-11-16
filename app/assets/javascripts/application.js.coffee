@@ -1,11 +1,7 @@
 $ ->
-  flashCallback = undefined
-
+  
   flashCallback = ->
-    $('#flash').fadeOut('slow')
-
-  $('#flash').bind 'click', ((_this) ->
-    (ev) ->
-      $('#flash').fadeOut()
-  )(this)
+    $(".flash-message").fadeOut()
+  $(".flash-message").bind 'click', (ev) =>
+    $(".flash-message").fadeOut()
   setTimeout flashCallback, 3000
